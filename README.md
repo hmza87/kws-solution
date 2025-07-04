@@ -13,6 +13,7 @@ This project was initialized using `npx create-vite`, and this is how it's struc
 │   │   ├── Types.ts                 # TypeScript interfaces (for now used only for CharCoordinate)
 │   │   ├── UI.tsx                   # React component for the user interface
 │   │   ├── ui.css                   # Tailwind CSS and UI styling
+│   │   ├── WordSearchSolver.test.ts # Unit tests for WordSearchSolver
 │   │   └── WordSearchSolver.ts      # Core logic for solving the word search puzzle
 │   ├── main.tsx                     # Entry point for the React application
 │   └── vite-env.d.ts                # Vite environment type definitions
@@ -65,3 +66,6 @@ KIRK    (7,4),(6,5),(5,6),(4,7)
 ...
 ```
 
+
+## Test
+The test is implemented using vitest, run `npm test` to start testing

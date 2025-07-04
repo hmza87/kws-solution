@@ -3,7 +3,9 @@
 The project contains my solution for the kata word search solution, and the solution is implemented in "[WordSearchSolver.ts](src%2Fkwss%2FWordSearchSolver.ts)".
 I've included a UI to interact with the solution and visualize results.
 
-This project was initialized using `npx create-vite`, and this is how it's structured :
+**note : The solution is deployed online for quick access [view online](https://kwss.hamza87.com/)**
+
+The project was initialized using `npx create-vite`, and this is how it's structured :
 
 
 ```

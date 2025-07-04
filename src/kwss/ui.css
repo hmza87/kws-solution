@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+
+.grid-preview {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    user-select: none;
+}
+.gp-row {
+    display: flex;
+    align-items: center;
+}
+
+.gp-col {
+    width: 1rem;
+    height: 1rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    text-align: center;
+    background: #0000001a;
+    transition: all 200ms;
+}
+
+.gp-row:nth-child(even) > .gp-col:nth-child(even) {
+    background: transparent;
+}
+
+.gp-row:nth-child(odd) > .gp-col:nth-child(odd) {
+    background: #2d2d2d00;
+}
+
+.gp-col.h {
+    font-weight: bold;
+    outline: 1px solid;
+}
+
+.gp-col.h:hover {
+    transform: scale(1.2);
+}

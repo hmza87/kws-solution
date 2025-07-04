@@ -42,3 +42,9 @@
 .gp-col.h:hover {
     transform: scale(1.2);
 }
+
+
+a {
+    font-weight: bold;
+    color: var(--color-blue-700);
+}

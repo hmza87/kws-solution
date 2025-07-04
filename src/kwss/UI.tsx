@@ -4,6 +4,8 @@ import WordSearchSolver from "./WordSearchSolver.ts";
 import type {CharCoordinate} from "./Types.ts";
 import type { JSX } from "react/jsx-runtime";
 
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+
 function UI() {
 
     const example = `BONES,KHAN,KIRK,SCOTTY,SPOCK,SULU,UHURA
@@ -57,7 +59,7 @@ K,Y,L,B,Q,Q,P,M,D,F,C,K,E,A,B`;
             }
 
 
-        } catch (ex) {
+        } catch (ex:any) {
             setError(ex.message);
         }
     }
@@ -81,6 +83,8 @@ K,Y,L,B,Q,Q,P,M,D,F,C,K,E,A,B`;
     }
 
     const renderResultView = ()=>{
+        if(!solver || !result) return null;
+
         return (
             <div className="side-preview flex-1 min-h-80 min-w-80">
 
@@ -142,7 +146,7 @@ K,Y,L,B,Q,Q,P,M,D,F,C,K,E,A,B`;
 
 
                 <textarea onChange={e => setInput(e.target.value)} value={input}
-                          className={"border-blue-100 border-2 rounded mt-8 w-full h-52"}></textarea>
+                          className={"p-2 border-blue-100 border-2 rounded mt-8 w-full h-52"}></textarea>
                 <p className={'text-gray-400 mb-8'}>You can generate puzzles from <a className={'text-gray-400'}
                                                                                      target={'_blank'}
                                                                                      href="https://puzzlemaker.discoveryeducation.com/word-search">Puzzlemaker</a>
@@ -165,7 +169,7 @@ K,Y,L,B,Q,Q,P,M,D,F,C,K,E,A,B`;
             <button
                 onClick={() => setView('input')}
                 style={{padding: '4px 8px'}}
-                className={'bg-blue-950 text-blue-50 p-0.5'}>
+                className={'bg-blue-600 duration-300 ease-in-out font-bold hover:bg-blue-700 rounded-xl shadow-md text-white transition'}>
                 Return
             </button>
         );
